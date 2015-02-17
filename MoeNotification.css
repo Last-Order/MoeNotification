@@ -1,30 +1,33 @@
 .MoeNotification-notice{
-	position: relative;
-	width: auto;
-	margin: 3px 5px 3px 5px;
-	overflow: hidden;
-	box-shadow: 0 1px 2px #aaa;
-	display: none;
+    position: relative;
+    width: auto;
+    margin: 3px 5px 3px 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px #aaa;
+    font-size: 12px !important;
+    display: none;
 }
 .MoeNotification-notice span{
-	text-align: left;
-	position: relative;
-	margin: 3px auto 3px 3px;
-	color: white;
-	font-family: '微软雅黑';
+    text-align: left;
+    position: relative;
+    margin: 3px auto 3px 3px;
+    color: white;
+    font-family: '微软雅黑';
+    font-size: 12px !important;
+    line-height: 1 !important;
 }
 .MoeNotification-notice-success{
-	background-color: #008a00;
+    background-color: #008a00;
 }
 .MoeNotification-notice-warning{
-	background-color: #d24726;
+    background-color: #d24726;
 }
 .MoeNotification-notice-error{
-	background-color: #b00e06;
+    background-color: #b00e06;
 }
 #MoeNotification{
-	position: absolute;
-	width: 30%;
-	left: 5px;
-	bottom: 10px;
+    position: absolute;
+    width: 30%;
+    left: 5px;
+    bottom: 10px;
 }

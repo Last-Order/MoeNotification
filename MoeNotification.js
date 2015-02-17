@@ -11,7 +11,20 @@ function MoeNotification(undefined){
 			          .fadeIn(300)
 		);
 		self.bind();
+		self.clear();
 		_callback($("#MoeNotification").find('.MoeNotification-notice').last());
+	}
+	this.clear = function(){
+		if ($(".MoeNotification-notice").length>=10){
+			//self.slideLeft($(".MoeNotification-notice").first());
+			$("#MoeNotification").children().first().fadeOut(150,function(){
+				$(this).remove();
+			});
+			setTimeout(self.clear,300);
+		}
+		else{
+			return false;
+		}
 	}
 	this.bind = function(){
 		$(".MoeNotification-notice").mouseover(function(){
