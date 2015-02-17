@@ -1,6 +1,6 @@
 function MoeNotification(undefined){
 	var self = this;
-	this.create = function(text,type,callback){
+	this.display = function(text,type,callback){
 		var _callback = callback || function(){};
 		var _text = text  || '喵~';
 		var _type = type || 'success';
@@ -14,6 +14,20 @@ function MoeNotification(undefined){
 		self.clear();
 		_callback($("#MoeNotification").find('.MoeNotification-notice').last());
 	}
+	this.create = {
+		success : function(text,callback){
+			var _callback = callback || function(){};
+			self.display(text,'success',_callback);
+		},
+		warning : function(text,callback){
+			var _callback = callback || function(){};
+			self.display(text,'warning',_callback);
+		},
+		error : function(text,callback){
+			var _callback = callback || function(){};
+			self.display(text,'error',_callback);
+		}
+	};
 	this.clear = function(){
 		if ($(".MoeNotification-notice").length>=10){
 			//self.slideLeft($(".MoeNotification-notice").first());

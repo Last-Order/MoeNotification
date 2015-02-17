@@ -37,7 +37,7 @@
 #MoeNotification{
 	position: absolute;
 	width: 30%;
-	right:7px;
+	left:0px;
 	bottom: 30px;
 	z-index:713;
 }
