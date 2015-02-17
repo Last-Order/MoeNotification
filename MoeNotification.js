@@ -1,8 +1,8 @@
 function MoeNotification(undefined){
 	var self = this;
 	this.create = function(text,type,callback){
-		_callback = callback || function(){};
-		_text = text  || '喵~';
+		var _callback = callback || function(){};
+		var _text = text  || '喵~';
 		var _type = type || 'success';
 		$("#MoeNotification").append(
 			$("<div>").addClass('MoeNotification-notice')
