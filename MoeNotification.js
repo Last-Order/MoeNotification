@@ -2,11 +2,12 @@ function MoeNotification(undefined){
 	var self = this;
 	this.create = function(text,type,callback){
 		_callback = callback || function(){};
+		_text = text  || '喵~';
 		var _type = type || 'success';
 		$("#MoeNotification").append(
 			$("<div>").addClass('MoeNotification-notice')
 			          .addClass('MoeNotification-notice-' + _type)
-			          .append('<span>' + text || 'Empty Input' + '</span>')
+			          .append('<span>' + _text + '</span>')
 			          .fadeIn(300)
 		);
 		self.bind();
@@ -31,13 +32,7 @@ function MoeNotification(undefined){
 	this.init = function(){
 		$("body").append('<div id="MoeNotification"></div>');
 	}
-	this.init();
+	if (!$("#MoeNotification").length>0){
+		this.init();
+	}
 }
-$(document).ready(function(){
-	a = new MoeNotification();
-	a.create('Success',null,function(object){
-		setTimeout(function(){
-			slideLeft(object);
-	    },3000);
-    })
-});

@@ -1,6 +1,5 @@
 .MoeNotification-notice{
 	position: relative;
-	max-height: 20px;
 	width: auto;
 	margin: 3px 5px 3px 5px;
 	overflow: hidden;
@@ -10,23 +9,22 @@
 .MoeNotification-notice span{
 	text-align: left;
 	position: relative;
-	margin: 2px auto 2px 3px;
+	margin: 3px auto 3px 3px;
 	color: white;
 	font-family: '微软雅黑';
 }
 .MoeNotification-notice-success{
-	background-color: #047401;
+	background-color: #008a00;
 }
-.MoeNotification-notice-warn{
-	background-color: #e2ab05;
+.MoeNotification-notice-warning{
+	background-color: #d24726;
 }
 .MoeNotification-notice-error{
 	background-color: #b00e06;
 }
 #MoeNotification{
 	position: absolute;
-	width: 20%;
-	left: 10px;
+	width: 30%;
+	left: 5px;
 	bottom: 10px;
-	border:1px black solid;
 }
