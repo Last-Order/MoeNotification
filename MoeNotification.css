@@ -4,7 +4,7 @@
     margin: 3px 5px 3px 5px;
     overflow: hidden;
     box-shadow: 0 1px 2px #aaa;
-    font-size: 12px !important;
+    font-size: 14px !important;
     display: none;
 }
 .MoeNotification-notice span{
@@ -13,21 +13,24 @@
     margin: 3px auto 3px 3px;
     color: white;
     font-family: '微软雅黑';
-    font-size: 12px !important;
-    line-height: 1 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
 }
 .MoeNotification-notice-success{
-    background-color: #008a00;
+	border-left: 5px #8DDA93 solid;
+    background-color: #008A00;
 }
 .MoeNotification-notice-warning{
-    background-color: #d24726;
+	border-left: 5px #FFDF00 solid;
+    background-color: #E29724;
 }
 .MoeNotification-notice-error{
-    background-color: #b00e06;
+	border-left: 5px #E71717 solid;
+    background-color: #B00E06;
 }
 #MoeNotification{
     position: absolute;
     width: 30%;
-    left: 5px;
-    bottom: 10px;
+    left: 0px;
+    bottom: 30px;
 }
