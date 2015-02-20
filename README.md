@@ -9,6 +9,8 @@
 
 ##用法##
 
+引入MoeNotification.js和MoeNotification.css
+
 ```
 nya = new MoeNotification();
 nya.create.success(text,callback(optional));//创建正常提示框
