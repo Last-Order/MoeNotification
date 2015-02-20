@@ -9,6 +9,8 @@
 
 ##用法##
 
+引入jQuery
+
 引入MoeNotification.js和MoeNotification.css
 
 ```
