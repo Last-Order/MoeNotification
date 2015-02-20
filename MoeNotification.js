@@ -40,6 +40,21 @@ function MoeNotification(undefined){
 			return false;
 		}
 	}
+	this.empty = function(f){
+		$(".MoeNotification-notice").each(function(i){
+			if ($.isFunction(f)){
+				var object = this;
+				setTimeout(function(){
+					f($(object));
+				},200*i);
+			}
+			else{
+				$(this).delay(i*200).fadeOut('fast',function(){
+				    $(this).remove();
+			    })
+			}
+		})
+	}
 	this.bind = function(){
 		$(".MoeNotification-notice").mouseover(function(){
 			self.slideLeft($(this));
