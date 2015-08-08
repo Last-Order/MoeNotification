@@ -1,12 +1,12 @@
 (function(factory){
-	var _moenotice = new factory();
 	if(typeof define === "function" && define.amd){
-		define("moenotice", ["jquery"], function(){
+		define("moenotice", ["jquery"], function($){
+			var _moenotice = new factory($);
 			return _moenotice;
 		})
 	}
 	window.MoeNotification = factory;
-})(function(){
+})(function($){
 	var self = this;
 	this.display = function(text,type,callback){
 		var _callback = callback || function(){};
