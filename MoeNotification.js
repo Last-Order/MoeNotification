@@ -1,4 +1,12 @@
-function MoeNotification(undefined){
+(function(factory){
+	var _moenotice = new factory();
+	if(typeof define === "function" && define.amd){
+		define("moenotice", ["jquery"], function(){
+			return _moenotice;
+		})
+	}
+	window.MoeNotification = factory;
+})(function(){
 	var self = this;
 	this.display = function(text,type,callback){
 		var _callback = callback || function(){};
@@ -77,4 +85,4 @@ function MoeNotification(undefined){
 	if (!$("#MoeNotification").length>0){
 		this.init();
 	}
-}
+});
