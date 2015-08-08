@@ -23,3 +23,21 @@ nya.empty(func(optional));
 nya.empty(slideLeft);
 //slideLeft是内置的一个函数 效果是向左滑出屏幕
 ```
+
+在require.js中调用
+
+
+MoeNotification的require模块名固定为"moenotice"
+
+```
+require.config({
+	paths: {
+		"jquery": "jquery.min",
+		"moenotice": "MoeNotification",
+	},
+});
+
+require(["moenotice"], function(moenotice){
+	moenotice.create.success("text");
+});
+```
