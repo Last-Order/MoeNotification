@@ -9,6 +9,7 @@
 })(function($){
 	var self = this;
 	this.display = function(text,type,callback){
+		self.check();
 		var _callback = callback || function(){};
 		var _text = text  || '喵~';
 		var _type = type || 'success';
@@ -68,6 +69,11 @@
 			self.slideLeft($(this));
 		});
 	}
+	this.check = function(){
+		if (!$("#MoeNotification").length>0){
+			this.init();
+		}
+	}
 	window.slideLeft = this.slideLeft = function(object,speed){
 		object.css('position','relative');
 		object.animate({
@@ -82,7 +88,5 @@
 	this.init = function(){
 		$("body").append('<div id="MoeNotification"></div>');
 	}
-	if (!$("#MoeNotification").length>0){
-		this.init();
-	}
+	this.check();
 });
